@@ -1,13 +1,19 @@
 <?php
 
+function gentabla($width,$height,$style,$dat){
+	$html="";
+	$html="<table " ."widh='". $width."' height='".$height ."'" .$style." >".$dat."</table>";
+	return $html;
+}
 function genform($dat){
 	$html="";
-	$html="<form>".$dat."</form>";
+	$html="<form action='registro.php' method='post'>".$dat."</form>";
+	return $html;
 }
-function geninput($datos,$id,$nombre){
+function geninput($datos,$type,$id,$nombre){
 
 	$html="";
-	$html=$nombre.": <input ".$datos.$id.">";
+	$html=$nombre.": <input type='".$type."' nombre='".$id."' id='".$id."'".$datos.">";
 
 	return $html;
 }
@@ -18,15 +24,18 @@ function head(){
 }
 function mheader(){
 
+
+
 $menu="<div><a href='index.php'>Inicio</a> ";
 $menu=$menu . "<a href='registro.php'>Registro</a> ";
 $menu=$menu . "<a href='login.php'>Ingresar</a></div>";
 
-
+$head="<head><link type'text/css' href='style/style.css' /></head>";
+$head="";
 $html = "";
 
 
-$html=$html . " <table width='100%' border='1' height='153'> ";
+$html=$head . $html . " <table width='100%' border='1' height='153'> ";
 $html=$html . "   <tr class='topheader' height=''> ";
 $html=$html . "     <td width='12%' height='53px' align='center' valign='middle' bgcolor='#2B3843'><span class='mheader'>---</span></td> ";
 $html=$html . "     <td width='55%' align='center' valign='middle' bgcolor='#2B3843'>&nbsp;</td> ";

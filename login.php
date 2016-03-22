@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+		<?php echo head();?>
 </head>
 <?php echo mheader(); ?>
 <body>
