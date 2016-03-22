@@ -17,8 +17,30 @@
 		  (YO: agregar menu con enlaces a las otras dos paginas, validar con javascript y subir a mysql)
 
 -->
-	<div><input type='radio'> 
-	</div>
+
+	<?php
+
+$html="";
+$html=$html . " <form action='' method='post'><table width='50%' border='1' align='center'> ";
+$html=$html . "   <tr> ";
+$html=$html . "     <td align='center' valign='middle'>Mail:</td> ";
+$html=$html . "     <td align='center' valign='middle'>".geninput(" value=''","text","mail","")."</td> ";
+$html=$html . "   </tr> ";
+$html=$html . "   <tr> ";
+$html=$html . "     <td align='center' valign='middle'>Pass:</td> ";
+$html=$html . "     <td align='center' valign='middle'>".geninput(" value=''","password","pass1","")."</td> ";
+$html=$html . "   </tr> ";
+$html=$html . "   <tr> ";
+$html=$html . "     <td colspan='2' align='center' valign='middle'><a href='#'>¿Olvido su Contraseña?</a></td> ";
+$html=$html . "   </tr> ";
+$html=$html . "   <tr> ";
+$html=$html . "     <td colspan='2' align='center' valign='middle'>".geninput(" value='Enviar'","Submit","btn","")."</td> ";
+$html=$html . "   </tr> ";
+$html=$html . " </table></form> ";
+
+echo $html;
+	?>
+
 	<?php echo footer();?>
 </body>
 </html>

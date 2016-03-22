@@ -5,6 +5,15 @@ function gentabla($width,$height,$style,$dat){
 	$html="<table " ."widh='". $width."' height='".$height ."'" .$style." >".$dat."</table>";
 	return $html;
 }
+function gencelda($dat){
+	$html="";
+	$html="<td>".$dat."</td>";
+}
+
+function genfila($dat){
+	$html="";
+	$html="<tr>".$dat."</tr>";
+}
 function genform($dat){
 	$html="";
 	$html="<form action='registro.php' method='post'>".$dat."</form>";
@@ -13,7 +22,7 @@ function genform($dat){
 function geninput($datos,$type,$id,$nombre){
 
 	$html="";
-	$html=$nombre.": <input type='".$type."' nombre='".$id."' id='".$id."'".$datos.">";
+	$html=$nombre." <input type='".$type."' nombre='".$id."' id='".$id."'".$datos.">";
 
 	return $html;
 }
